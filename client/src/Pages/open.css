@@ -1,0 +1,341 @@
+
+
+.containerdesc {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxdesc {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+    padding: 45px;
+    margin: 15px 0;
+    width: 950px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "images info"
+    "images description";
+    grid-gap: 35px;
+}
+
+.boxdesc .imagesdesc {
+    grid-area: images;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "active active active"
+    "idle idle idle";
+    grid-gap: 5px;
+}
+
+.boxdesc .imagesdesc .img-holder img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid silver;
+}
+
+.boxdesc .imagesdesc .img-holder.active {
+    grid-area: active;
+    position: relative;
+}
+.boxdesc .imagesdesc .img-holder.active .overlappro{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-color: green;
+	color: #FFFFFF;
+	padding: 4px 8px;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 4px;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);;
+}
+
+.boxdesc .imagesdesc .img-holder:not(.active):hover {
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.boxdesc .basic-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.boxdesc .basic-info .rate123 {
+    color: black;
+}
+
+.boxdesc .basic-info .pricedesc {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.boxdesc .basic-info .options a {
+    color: white;
+    background-color: #00b4d5;
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.boxdesc .basic-info .options a:hover {
+    background-color: #0077b6;
+}
+
+.boxdesc .description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.boxdesc .description p {
+    color: #808080;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.boxdesc .description .features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #808080;
+}
+
+.boxdesc .description .features i {
+    margin-right: 5px;
+}
+
+.boxdesc .description .features .fa-circle-check {
+    color: #0077b6;
+}
+
+.boxdesc .description .features .fa-circle-xmark {
+    color: #ffb900;
+}
+
+.boxdesc .description .social {
+    list-style: none;
+    display: flex;
+}
+
+.boxdesc .description .social a {
+    margin-right: 15px;
+    color: #808080;
+}
+
+.boxdesc .description .social a:hover {
+    color: #00b4d5;
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-control button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 25px;
+    background: lightseagreen;
+    border: 2px solid grey;
+  }
+  .quantity-control button:hover {
+  scale: 1.2;
+  }
+  .quantity {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+
+
+
+  .rate {
+    display: inline-block;
+    border: 0;
+    color: gold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .box {
+        width: 750px;
+        grid-template-areas: 
+        "info info"
+        "images description";
+    }
+    .box .basic-info .options a {
+        padding: 8.5px 12px;
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    .boxdesc {
+        width: 600px;
+        grid-template-areas: 
+        "images info"
+        "description description";
+    }
+    .boxdesc .imagesdesc {
+        gap: 3px;
+    }
+    .boxdesc .imagesdesc .img-holder img {
+        border-radius: 5px;
+    }
+    .quantity-control button:hover{
+        scale: 1.2;
+      }
+}
+
+@media (max-width: 640px) {
+    .boxdesc {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 35px;
+        margin: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        "images"
+        "info"
+        "description";
+    }
+    .quantity-control button:hover{
+        scale: 1.2;
+      }
+}
+
+
+
+
+
+/* Styles for the custom model overlay */
+.custom-model-main {
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.15s linear, z-index 0.15;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* Styles for the model when open */
+  .model-open {
+    z-index: 99999;
+    opacity: 1;
+    overflow: hidden;
+  }
+  
+  .custom-model-inner {
+    transform: translate(0, -25%);
+    transition: transform 0.3s ease-out;
+    display: inline-block;
+    vertical-align: middle;
+    width: 400px;
+    margin: 30px auto;
+    max-width: 97%;
+  }
+  .custom-model-main:before {
+    content: "";
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    margin-right: -0px;
+    height: 60%;
+  }
+  .custom-model-wrap {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .model-open .custom-model-inner {
+    transform: translate(0, 0);
+    position: relative;
+    z-index: 999;
+  }
+  
+  .model-open .bg-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+  }
+  
+  .bg-overlay {
+    background: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transition: opacity 0.15s linear, z-index 0.15s linear;
+  }
+  
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    cursor: pointer;
+    z-index: 99;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+
+
+
+.cartadded {
+    color: green;
+    font-weight: bold;
+}

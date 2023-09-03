@@ -1,0 +1,171 @@
+.col123{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+
+.customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #000; /* Black background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+    color: #fff; /* Text color */
+  }
+td{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #666; /* Add borders for cells */
+  background-color: #f2f2f2;
+  color: black;
+  }
+th {
+  background-color: #333; /* Dark gray background color for header */
+  color: #fff; /* Text color */
+  padding: 10px 30px;
+
+  }
+  
+
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 20px;
+  }
+  
+  /* Hover Effect */
+  .button:hover {
+    background-color: #0056b3; /* New background color on hover */
+  }
+  
+  /* Disabled State */
+  .button:disabled {
+    background-color: #ccc; /* Disabled background color */
+    cursor: not-allowed;
+  }
+  
+  /* Different Button Styles */
+  .primary-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .secondary-button{
+    background-color: red;
+    color: #fff;
+  }
+
+
+  .add-user-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    margin: 30px auto;
+  }
+
+  /* Styles for the search bar */
+  .search-bar {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px;
+    font-size: 16px;
+    float: right;
+    margin: 30px auto;
+  }
+
+  /* Adjust the spacing between the button and the search bar */
+  .button-and-search {
+    margin-bottom: 20px;
+  }
+
+
+
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Styles for form headings */
+  .form-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Styles for form inputs */
+  .form-input {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  /* Style the submit button */
+  .submit-button12 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+  }
