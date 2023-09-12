@@ -1,0 +1,14 @@
+Live Video -https://drive.google.com/file/d/1XCnqHB_5fSKNOnLaKkl1XsmqozMbBCiR/view?usp=sharing
+
+Description:A CRUD (Create, Read, Update, Delete) application is a fundamental software system that enables users to efficiently manage data.
+This particular CRUD application incorporates several key features for enhanced functionality and security.
+
+The application begins with a secure login page and a user-friendly signup page, both equipped with essential validation mechanisms.
+
+To ensure secure user authentication, the application employs JSON Web Tokens (JWT), safeguarding sensitive information during login and enhancing overall security.
+Once logged in, users are directed to a home page with a search bar, enabling them to search and filter data effectively. Users can also perform a range of CRUD operations on a data table, which includes 
+adding new entries, reading existing data, updating entries, and deleting records when necessary.
+
+In summary, this comprehensive CRUD application combines user authentication, data search capabilities, and robust data management functions to provide a secure and user-friendly experience.
+
+Technology Stack: React, ExpressJs, NodeJs, MongoDB, JWT Token
